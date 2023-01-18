@@ -17,6 +17,43 @@ function findObjectOfTypeWithName(ast: any, type: string, name: string): any {
     return clazz;
 }
 
+function stringOfType(property: { [key: string]: any; }, node: any): string {
+    if (typeof node.value == "object") {
+        return stringOfType(property, node.value);
+    }
+    if (node.type == "NullableTypeAnnotation") {
+        property["nullable"] = true;
+        if (node.typeAnnotation) {
+            return stringOfType(property, node.typeAnnotation);
+        } else {
+            return "ERROR";
+        }
+    } else if (node.type == "GenericTypeAnnotation") {
+        if (node && node.id.name) {
+            return node.id.name;
+        } if (node && node.typeParameters) {
+            return stringOfType(property, node.typeParameters)
+        } else {
+            return "ERROR: Generic without id.name or typeParameters "+JSON.stringify(node);
+        }
+    } else if (node.type == "UnionTypeAnnotation") {
+        property["union"] = true;
+        if (node.types) {
+            return (node.types as any[]).map(item => {
+                return stringOfType(property, item)
+            }).filter((n, i, arr) => arr.indexOf(n) === i).join("|")
+        } else {
+            return "ERROR: Union without types key";
+        }
+    } else if (node.id) {
+        return node.id.type;
+    } else if (node.type) {
+        return node.type;
+    } else {
+        return "ERROR: " + JSON.stringify(node);
+    }
+}
+
 function addPropertiesFrom(typeAlias: any, properties: { [key: string]: any; }, callback: ((prop: any) => void) | null = null) {
     if (typeAlias && typeAlias.right) {
         const nodeProperties: any = (typeAlias.right.typeParameters) ? typeAlias.right.typeParameters.params[0].properties : typeAlias.right.properties;
@@ -25,12 +62,7 @@ function addPropertiesFrom(typeAlias: any, properties: { [key: string]: any; }, 
                 const node: any = nodeProperties[nodeKey];
                 if (node.value) {
                     let property: { [key: string]: any; } = {};
-                    if (node.value.type == "NullableTypeAnnotation") {
-                        property["type"] = node.value.typeAnnotation.type;
-                        property["nullable"] = true;
-                    } else {
-                        property["type"] = node.value.type;
-                    }
+                    property["type"] = stringOfType(property, node);
                     if (callback) {
                         callback(property);
                     }

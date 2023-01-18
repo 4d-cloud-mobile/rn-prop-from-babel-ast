@@ -1,17 +1,865 @@
 {
   "ActivityIndicator": {
-    "sanityClassFound": false
+    "animating": {
+      "type": "BooleanTypeAnnotation",
+      "nullable": true
+    },
+    "color": {
+      "type": "GenericTypeAnnotation",
+      "nullable": true
+    },
+    "size": {
+      "type": "GenericTypeAnnotation",
+      "nullable": true
+    },
+    "classFound": false,
+    "typeAliasFound": true
   },
   "Switch": {
-    "sanityClassFound": false
+    "disabled": {
+      "type": "BooleanTypeAnnotation",
+      "nullable": true
+    },
+    "value": {
+      "type": "BooleanTypeAnnotation",
+      "nullable": true
+    },
+    "thumbColor": {
+      "type": "GenericTypeAnnotation",
+      "nullable": true
+    },
+    "trackColor": {
+      "type": "GenericTypeAnnotation",
+      "nullable": true
+    },
+    "ios_backgroundColor": {
+      "type": "GenericTypeAnnotation",
+      "nullable": true
+    },
+    "onChange": {
+      "type": "FunctionTypeAnnotation",
+      "nullable": true
+    },
+    "onValueChange": {
+      "type": "FunctionTypeAnnotation",
+      "nullable": true
+    },
+    "classFound": false,
+    "typeAliasFound": true
   },
   "RefreshControl": {
-    "sanityClassFound": false
+    "onRefresh": {
+      "type": "FunctionTypeAnnotation",
+      "nullable": true
+    },
+    "refreshing": {
+      "type": "BooleanTypeAnnotation"
+    },
+    "progressViewOffset": {
+      "type": "NumberTypeAnnotation",
+      "nullable": true
+    },
+    "classFound": true,
+    "typeAliasFound": true
   },
   "Slider": {
-    "sanityClassFound": false
+    "style": {
+      "type": "GenericTypeAnnotation",
+      "nullable": true
+    },
+    "value": {
+      "type": "NumberTypeAnnotation",
+      "nullable": true
+    },
+    "step": {
+      "type": "NumberTypeAnnotation",
+      "nullable": true
+    },
+    "minimumValue": {
+      "type": "NumberTypeAnnotation",
+      "nullable": true
+    },
+    "maximumValue": {
+      "type": "NumberTypeAnnotation",
+      "nullable": true
+    },
+    "minimumTrackTintColor": {
+      "type": "GenericTypeAnnotation",
+      "nullable": true
+    },
+    "maximumTrackTintColor": {
+      "type": "GenericTypeAnnotation",
+      "nullable": true
+    },
+    "thumbTintColor": {
+      "type": "GenericTypeAnnotation",
+      "nullable": true
+    },
+    "disabled": {
+      "type": "BooleanTypeAnnotation",
+      "nullable": true
+    },
+    "onValueChange": {
+      "type": "FunctionTypeAnnotation",
+      "nullable": true
+    },
+    "onSlidingComplete": {
+      "type": "FunctionTypeAnnotation",
+      "nullable": true
+    },
+    "testID": {
+      "type": "StringTypeAnnotation",
+      "nullable": true
+    },
+    "accessibilityState": {
+      "type": "GenericTypeAnnotation",
+      "nullable": true
+    },
+    "classFound": false,
+    "typeAliasFound": true
+  },
+  "Pressable": {
+    "accessibilityActions": {
+      "type": "GenericTypeAnnotation",
+      "nullable": true
+    },
+    "accessibilityElementsHidden": {
+      "type": "BooleanTypeAnnotation",
+      "nullable": true
+    },
+    "accessibilityHint": {
+      "type": "GenericTypeAnnotation",
+      "nullable": true
+    },
+    "accessibilityLanguage": {
+      "type": "GenericTypeAnnotation",
+      "nullable": true
+    },
+    "accessibilityIgnoresInvertColors": {
+      "type": "BooleanTypeAnnotation",
+      "nullable": true
+    },
+    "accessibilityLabel": {
+      "type": "GenericTypeAnnotation",
+      "nullable": true
+    },
+    "accessibilityLiveRegion": {
+      "type": "UnionTypeAnnotation",
+      "nullable": true
+    },
+    "accessibilityRole": {
+      "type": "GenericTypeAnnotation",
+      "nullable": true
+    },
+    "accessibilityState": {
+      "type": "GenericTypeAnnotation",
+      "nullable": true
+    },
+    "accessibilityValue": {
+      "type": "GenericTypeAnnotation",
+      "nullable": true
+    },
+    "undefined": {
+      "type": "StringTypeAnnotation",
+      "nullable": true
+    },
+    "accessibilityViewIsModal": {
+      "type": "BooleanTypeAnnotation",
+      "nullable": true
+    },
+    "accessible": {
+      "type": "BooleanTypeAnnotation",
+      "nullable": true
+    },
+    "focusable": {
+      "type": "BooleanTypeAnnotation",
+      "nullable": true
+    },
+    "importantForAccessibility": {
+      "type": "UnionTypeAnnotation",
+      "nullable": true
+    },
+    "onAccessibilityAction": {
+      "type": "FunctionTypeAnnotation",
+      "nullable": true
+    },
+    "cancelable": {
+      "type": "BooleanTypeAnnotation",
+      "nullable": true
+    },
+    "children": {
+      "type": "UnionTypeAnnotation"
+    },
+    "delayHoverIn": {
+      "type": "NumberTypeAnnotation",
+      "nullable": true
+    },
+    "delayHoverOut": {
+      "type": "NumberTypeAnnotation",
+      "nullable": true
+    },
+    "delayLongPress": {
+      "type": "NumberTypeAnnotation",
+      "nullable": true
+    },
+    "disabled": {
+      "type": "BooleanTypeAnnotation",
+      "nullable": true
+    },
+    "hitSlop": {
+      "type": "GenericTypeAnnotation",
+      "nullable": true
+    },
+    "pressRetentionOffset": {
+      "type": "GenericTypeAnnotation",
+      "nullable": true
+    },
+    "onLayout": {
+      "type": "FunctionTypeAnnotation",
+      "nullable": true
+    },
+    "onHoverIn": {
+      "type": "FunctionTypeAnnotation",
+      "nullable": true
+    },
+    "onHoverOut": {
+      "type": "FunctionTypeAnnotation",
+      "nullable": true
+    },
+    "onLongPress": {
+      "type": "FunctionTypeAnnotation",
+      "nullable": true
+    },
+    "onPress": {
+      "type": "FunctionTypeAnnotation",
+      "nullable": true
+    },
+    "onPressIn": {
+      "type": "FunctionTypeAnnotation",
+      "nullable": true
+    },
+    "onPressOut": {
+      "type": "FunctionTypeAnnotation",
+      "nullable": true
+    },
+    "style": {
+      "type": "UnionTypeAnnotation"
+    },
+    "testID": {
+      "type": "StringTypeAnnotation",
+      "nullable": true
+    },
+    "android_disableSound": {
+      "type": "BooleanTypeAnnotation",
+      "nullable": true
+    },
+    "android_ripple": {
+      "type": "GenericTypeAnnotation",
+      "nullable": true
+    },
+    "testOnly_pressed": {
+      "type": "BooleanTypeAnnotation",
+      "nullable": true
+    },
+    "unstable_pressDelay": {
+      "type": "NumberTypeAnnotation",
+      "nullable": true
+    },
+    "classFound": false,
+    "typeAliasFound": true
+  },
+  "ScrollView": {
+    "contentContainerStyle": {
+      "type": "GenericTypeAnnotation",
+      "nullable": true
+    },
+    "contentOffset": {
+      "type": "GenericTypeAnnotation",
+      "nullable": true
+    },
+    "disableIntervalMomentum": {
+      "type": "BooleanTypeAnnotation",
+      "nullable": true
+    },
+    "decelerationRate": {
+      "type": "GenericTypeAnnotation",
+      "nullable": true
+    },
+    "horizontal": {
+      "type": "BooleanTypeAnnotation",
+      "nullable": true
+    },
+    "invertStickyHeaders": {
+      "type": "BooleanTypeAnnotation",
+      "nullable": true
+    },
+    "keyboardDismissMode": {
+      "type": "UnionTypeAnnotation",
+      "nullable": true
+    },
+    "keyboardShouldPersistTaps": {
+      "type": "UnionTypeAnnotation",
+      "nullable": true
+    },
+    "onMomentumScrollBegin": {
+      "type": "FunctionTypeAnnotation",
+      "nullable": true
+    },
+    "onMomentumScrollEnd": {
+      "type": "FunctionTypeAnnotation",
+      "nullable": true
+    },
+    "onScroll": {
+      "type": "FunctionTypeAnnotation",
+      "nullable": true
+    },
+    "onScrollBeginDrag": {
+      "type": "FunctionTypeAnnotation",
+      "nullable": true
+    },
+    "onScrollEndDrag": {
+      "type": "FunctionTypeAnnotation",
+      "nullable": true
+    },
+    "onContentSizeChange": {
+      "type": "FunctionTypeAnnotation"
+    },
+    "onKeyboardDidShow": {
+      "type": "FunctionTypeAnnotation"
+    },
+    "onKeyboardDidHide": {
+      "type": "FunctionTypeAnnotation"
+    },
+    "onKeyboardWillShow": {
+      "type": "FunctionTypeAnnotation"
+    },
+    "onKeyboardWillHide": {
+      "type": "FunctionTypeAnnotation"
+    },
+    "pagingEnabled": {
+      "type": "BooleanTypeAnnotation",
+      "nullable": true
+    },
+    "scrollEnabled": {
+      "type": "BooleanTypeAnnotation",
+      "nullable": true
+    },
+    "showsVerticalScrollIndicator": {
+      "type": "BooleanTypeAnnotation",
+      "nullable": true
+    },
+    "stickyHeaderHiddenOnScroll": {
+      "type": "BooleanTypeAnnotation",
+      "nullable": true
+    },
+    "stickyHeaderIndices": {
+      "type": "GenericTypeAnnotation",
+      "nullable": true
+    },
+    "StickyHeaderComponent": {
+      "type": "GenericTypeAnnotation"
+    },
+    "snapToAlignment": {
+      "type": "UnionTypeAnnotation",
+      "nullable": true
+    },
+    "snapToInterval": {
+      "type": "NumberTypeAnnotation",
+      "nullable": true
+    },
+    "snapToOffsets": {
+      "type": "GenericTypeAnnotation",
+      "nullable": true
+    },
+    "snapToStart": {
+      "type": "BooleanTypeAnnotation",
+      "nullable": true
+    },
+    "snapToEnd": {
+      "type": "BooleanTypeAnnotation",
+      "nullable": true
+    },
+    "removeClippedSubviews": {
+      "type": "BooleanTypeAnnotation",
+      "nullable": true
+    },
+    "refreshControl": {
+      "type": "GenericTypeAnnotation",
+      "nullable": true
+    },
+    "children": {
+      "type": "GenericTypeAnnotation"
+    },
+    "innerViewRef": {
+      "type": "GenericTypeAnnotation"
+    },
+    "scrollViewRef": {
+      "type": "GenericTypeAnnotation"
+    },
+    "classFound": true,
+    "typeAliasFound": true
+  },
+  "Clipboard": {
+    "classFound": false,
+    "typeAliasFound": false
+  },
+  "TextInput": {
+    "autoCapitalize": {
+      "type": "GenericTypeAnnotation",
+      "nullable": true
+    },
+    "autoCorrect": {
+      "type": "BooleanTypeAnnotation",
+      "nullable": true
+    },
+    "autoFocus": {
+      "type": "BooleanTypeAnnotation",
+      "nullable": true
+    },
+    "allowFontScaling": {
+      "type": "BooleanTypeAnnotation",
+      "nullable": true
+    },
+    "caretHidden": {
+      "type": "BooleanTypeAnnotation",
+      "nullable": true
+    },
+    "contextMenuHidden": {
+      "type": "BooleanTypeAnnotation",
+      "nullable": true
+    },
+    "defaultValue": {
+      "type": "GenericTypeAnnotation",
+      "nullable": true
+    },
+    "editable": {
+      "type": "BooleanTypeAnnotation",
+      "nullable": true
+    },
+    "forwardedRef": {
+      "type": "GenericTypeAnnotation",
+      "nullable": true
+    },
+    "enterKeyHint": {
+      "type": "GenericTypeAnnotation",
+      "nullable": true
+    },
+    "inputMode": {
+      "type": "GenericTypeAnnotation",
+      "nullable": true
+    },
+    "keyboardType": {
+      "type": "GenericTypeAnnotation",
+      "nullable": true
+    },
+    "maxFontSizeMultiplier": {
+      "type": "NumberTypeAnnotation",
+      "nullable": true
+    },
+    "maxLength": {
+      "type": "NumberTypeAnnotation",
+      "nullable": true
+    },
+    "multiline": {
+      "type": "BooleanTypeAnnotation",
+      "nullable": true
+    },
+    "onBlur": {
+      "type": "FunctionTypeAnnotation",
+      "nullable": true
+    },
+    "onChange": {
+      "type": "FunctionTypeAnnotation",
+      "nullable": true
+    },
+    "unstable_onChangeSync": {
+      "type": "FunctionTypeAnnotation",
+      "nullable": true
+    },
+    "onChangeText": {
+      "type": "FunctionTypeAnnotation",
+      "nullable": true
+    },
+    "unstable_onChangeTextSync": {
+      "type": "FunctionTypeAnnotation",
+      "nullable": true
+    },
+    "onContentSizeChange": {
+      "type": "FunctionTypeAnnotation",
+      "nullable": true
+    },
+    "onEndEditing": {
+      "type": "FunctionTypeAnnotation",
+      "nullable": true
+    },
+    "onFocus": {
+      "type": "FunctionTypeAnnotation",
+      "nullable": true
+    },
+    "onKeyPress": {
+      "type": "FunctionTypeAnnotation",
+      "nullable": true
+    },
+    "unstable_onKeyPressSync": {
+      "type": "FunctionTypeAnnotation",
+      "nullable": true
+    },
+    "onPressIn": {
+      "type": "FunctionTypeAnnotation",
+      "nullable": true
+    },
+    "onPressOut": {
+      "type": "FunctionTypeAnnotation",
+      "nullable": true
+    },
+    "onSelectionChange": {
+      "type": "FunctionTypeAnnotation",
+      "nullable": true
+    },
+    "onSubmitEditing": {
+      "type": "FunctionTypeAnnotation",
+      "nullable": true
+    },
+    "onScroll": {
+      "type": "FunctionTypeAnnotation",
+      "nullable": true
+    },
+    "placeholder": {
+      "type": "GenericTypeAnnotation",
+      "nullable": true
+    },
+    "placeholderTextColor": {
+      "type": "GenericTypeAnnotation",
+      "nullable": true
+    },
+    "readOnly": {
+      "type": "BooleanTypeAnnotation",
+      "nullable": true
+    },
+    "returnKeyType": {
+      "type": "GenericTypeAnnotation",
+      "nullable": true
+    },
+    "secureTextEntry": {
+      "type": "BooleanTypeAnnotation",
+      "nullable": true
+    },
+    "selection": {
+      "type": "GenericTypeAnnotation",
+      "nullable": true
+    },
+    "selectionColor": {
+      "type": "GenericTypeAnnotation",
+      "nullable": true
+    },
+    "selectTextOnFocus": {
+      "type": "BooleanTypeAnnotation",
+      "nullable": true
+    },
+    "blurOnSubmit": {
+      "type": "BooleanTypeAnnotation",
+      "nullable": true
+    },
+    "submitBehavior": {
+      "type": "GenericTypeAnnotation",
+      "nullable": true
+    },
+    "style": {
+      "type": "GenericTypeAnnotation",
+      "nullable": true
+    },
+    "value": {
+      "type": "GenericTypeAnnotation",
+      "nullable": true
+    },
+    "classFound": false,
+    "typeAliasFound": true
+  },
+  "Touchable": {
+    "classFound": false,
+    "typeAliasFound": false
+  },
+  "View": {
+    "classFound": false,
+    "typeAliasFound": true
+  },
+  "StaticRenderer": {
+    "shouldUpdate": {
+      "type": "BooleanTypeAnnotation"
+    },
+    "render": {
+      "type": "FunctionTypeAnnotation"
+    },
+    "classFound": true,
+    "typeAliasFound": true
+  },
+  "Image": {
+    "classFound": false,
+    "typeAliasFound": true
+  },
+  "Text": {
+    "accessible": {
+      "type": "BooleanTypeAnnotation",
+      "nullable": true
+    },
+    "accessibilityActions": {
+      "type": "GenericTypeAnnotation",
+      "nullable": true
+    },
+    "onAccessibilityAction": {
+      "type": "FunctionTypeAnnotation",
+      "nullable": true
+    },
+    "accessibilityHint": {
+      "type": "GenericTypeAnnotation",
+      "nullable": true
+    },
+    "accessibilityLanguage": {
+      "type": "GenericTypeAnnotation",
+      "nullable": true
+    },
+    "accessibilityLabel": {
+      "type": "GenericTypeAnnotation",
+      "nullable": true
+    },
+    "accessibilityRole": {
+      "type": "GenericTypeAnnotation",
+      "nullable": true
+    },
+    "accessibilityState": {
+      "type": "GenericTypeAnnotation",
+      "nullable": true
+    },
+    "undefined": {
+      "type": "StringTypeAnnotation",
+      "nullable": true
+    },
+    "adjustsFontSizeToFit": {
+      "type": "BooleanTypeAnnotation",
+      "nullable": true
+    },
+    "allowFontScaling": {
+      "type": "BooleanTypeAnnotation",
+      "nullable": true
+    },
+    "android_hyphenationFrequency": {
+      "type": "UnionTypeAnnotation",
+      "nullable": true
+    },
+    "children": {
+      "type": "GenericTypeAnnotation",
+      "nullable": true
+    },
+    "ellipsizeMode": {
+      "type": "UnionTypeAnnotation",
+      "nullable": true
+    },
+    "id": {
+      "type": "StringTypeAnnotation"
+    },
+    "maxFontSizeMultiplier": {
+      "type": "NumberTypeAnnotation",
+      "nullable": true
+    },
+    "nativeID": {
+      "type": "StringTypeAnnotation",
+      "nullable": true
+    },
+    "numberOfLines": {
+      "type": "NumberTypeAnnotation",
+      "nullable": true
+    },
+    "onLayout": {
+      "type": "FunctionTypeAnnotation",
+      "nullable": true
+    },
+    "onLongPress": {
+      "type": "FunctionTypeAnnotation",
+      "nullable": true
+    },
+    "onPress": {
+      "type": "FunctionTypeAnnotation",
+      "nullable": true
+    },
+    "onPressIn": {
+      "type": "FunctionTypeAnnotation",
+      "nullable": true
+    },
+    "onPressOut": {
+      "type": "FunctionTypeAnnotation",
+      "nullable": true
+    },
+    "onResponderGrant": {
+      "type": "FunctionTypeAnnotation",
+      "nullable": true
+    },
+    "onResponderMove": {
+      "type": "FunctionTypeAnnotation",
+      "nullable": true
+    },
+    "onResponderRelease": {
+      "type": "FunctionTypeAnnotation",
+      "nullable": true
+    },
+    "onResponderTerminate": {
+      "type": "FunctionTypeAnnotation",
+      "nullable": true
+    },
+    "onResponderTerminationRequest": {
+      "type": "FunctionTypeAnnotation",
+      "nullable": true
+    },
+    "onStartShouldSetResponder": {
+      "type": "FunctionTypeAnnotation",
+      "nullable": true
+    },
+    "onMoveShouldSetResponder": {
+      "type": "FunctionTypeAnnotation",
+      "nullable": true
+    },
+    "onTextLayout": {
+      "type": "FunctionTypeAnnotation",
+      "nullable": true
+    },
+    "pressRetentionOffset": {
+      "type": "GenericTypeAnnotation",
+      "nullable": true
+    },
+    "role": {
+      "type": "GenericTypeAnnotation",
+      "nullable": true
+    },
+    "selectable": {
+      "type": "BooleanTypeAnnotation",
+      "nullable": true
+    },
+    "style": {
+      "type": "GenericTypeAnnotation",
+      "nullable": true
+    },
+    "testID": {
+      "type": "StringTypeAnnotation",
+      "nullable": true
+    },
+    "disabled": {
+      "type": "BooleanTypeAnnotation",
+      "nullable": true
+    },
+    "selectionColor": {
+      "type": "StringTypeAnnotation",
+      "nullable": true
+    },
+    "dataDetectorType": {
+      "type": "UnionTypeAnnotation",
+      "nullable": true
+    },
+    "textBreakStrategy": {
+      "type": "UnionTypeAnnotation",
+      "nullable": true
+    },
+    "dynamicTypeRamp": {
+      "type": "UnionTypeAnnotation",
+      "nullable": true
+    },
+    "minimumFontScale": {
+      "type": "NumberTypeAnnotation",
+      "nullable": true
+    },
+    "suppressHighlighting": {
+      "type": "BooleanTypeAnnotation",
+      "nullable": true
+    },
+    "lineBreakStrategyIOS": {
+      "type": "UnionTypeAnnotation",
+      "nullable": true
+    },
+    "classFound": false,
+    "typeAliasFound": true
   },
   "Button": {
-    "sanityClassFound": false
+    "title": {
+      "type": "StringTypeAnnotation"
+    },
+    "onPress": {
+      "type": "FunctionTypeAnnotation"
+    },
+    "touchSoundDisabled": {
+      "type": "BooleanTypeAnnotation",
+      "nullable": true
+    },
+    "color": {
+      "type": "GenericTypeAnnotation",
+      "nullable": true
+    },
+    "hasTVPreferredFocus": {
+      "type": "BooleanTypeAnnotation",
+      "nullable": true
+    },
+    "nextFocusDown": {
+      "type": "NumberTypeAnnotation",
+      "nullable": true
+    },
+    "nextFocusForward": {
+      "type": "NumberTypeAnnotation",
+      "nullable": true
+    },
+    "nextFocusLeft": {
+      "type": "NumberTypeAnnotation",
+      "nullable": true
+    },
+    "nextFocusRight": {
+      "type": "NumberTypeAnnotation",
+      "nullable": true
+    },
+    "nextFocusUp": {
+      "type": "NumberTypeAnnotation",
+      "nullable": true
+    },
+    "accessibilityLabel": {
+      "type": "StringTypeAnnotation",
+      "nullable": true
+    },
+    "undefined": {
+      "type": "BooleanTypeAnnotation",
+      "nullable": true
+    },
+    "disabled": {
+      "type": "BooleanTypeAnnotation",
+      "nullable": true
+    },
+    "testID": {
+      "type": "StringTypeAnnotation",
+      "nullable": true
+    },
+    "accessible": {
+      "type": "BooleanTypeAnnotation",
+      "nullable": true
+    },
+    "accessibilityActions": {
+      "type": "GenericTypeAnnotation",
+      "nullable": true
+    },
+    "onAccessibilityAction": {
+      "type": "FunctionTypeAnnotation",
+      "nullable": true
+    },
+    "accessibilityState": {
+      "type": "GenericTypeAnnotation",
+      "nullable": true
+    },
+    "importantForAccessibility": {
+      "type": "UnionTypeAnnotation",
+      "nullable": true
+    },
+    "accessibilityHint": {
+      "type": "StringTypeAnnotation",
+      "nullable": true
+    },
+    "accessibilityLanguage": {
+      "type": "GenericTypeAnnotation",
+      "nullable": true
+    },
+    "classFound": true,
+    "typeAliasFound": true
   }
 }

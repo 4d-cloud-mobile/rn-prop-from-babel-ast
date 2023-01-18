@@ -14,6 +14,7 @@ function findObjectOfTypeWithName(ast: any, type: string, name: string): any {
             }
         }
     });
+    return clazz;
 }
 
 async function start(rootPath: string) {
@@ -22,6 +23,15 @@ async function start(rootPath: string) {
         "Switch": ["Switch", "Switch.js"].join(path.sep),
         "RefreshControl": ["RefreshControl", "RefreshControl.js"].join(path.sep),
         "Slider": ["Slider", "Slider.js"].join(path.sep),
+        "Pressable": ["Pressable", "Pressable.js"].join(path.sep),
+        "ScrollView": ["ScrollView", "ScrollView.js"].join(path.sep),
+        "Clipboard": ["Clipboard", "Clipboard.js"].join(path.sep),
+        "TextInput": ["TextInput", "TextInput.js"].join(path.sep),
+        "Touchable": ["Touchable", "Touchable.js"].join(path.sep),
+        "View": ["View", "View.js"].join(path.sep),
+        "StaticRenderer": ["StaticRenderer.js"].join(path.sep),
+        "Image": ["..", "Image", "ImageProps.js"].join(path.sep),
+        "Text": ["..", "Text", "TextProps.js"].join(path.sep),
         "Button": "Button.js"
     };
     let result: { [key: string]: any } = {}
@@ -38,24 +48,40 @@ async function start(rootPath: string) {
         
         let properties: { [key: string]: any } = {}
 
-        const componentClassNode = findObjectOfTypeWithName(ast, "ClassDeclaration", fileType)
-        const typeAlias = findObjectOfTypeWithName(ast, "TypeAlias", fileType+"Props") || findObjectOfTypeWithName(ast, "TypeAlias", "Props")
-                
-                /*if (path.node.type == "ObjectTypeProperty")  {
+        const componentClassNode = findObjectOfTypeWithName(ast, "ClassDeclaration", fileType) || findObjectOfTypeWithName(ast, "ClassDeclaration", fileType + "WithRef");
+        const typeAlias = findObjectOfTypeWithName(ast, "TypeAlias", fileType+"Props") || findObjectOfTypeWithName(ast, "TypeAlias", "Props"); // also add iOSProps and AndroidProps
+        if (typeAlias && typeAlias.right.typeParameters) {
+            const nodeProperties: any = typeAlias.right.typeParameters.params[0].properties;
+            for(const nodeKey in nodeProperties) {
+                const node: any = nodeProperties[nodeKey];
+                if (node.value) {
                     let property: { [key: string]: any } = {}
-                    if(path.node.value.type == "NullableTypeAnnotation") {
-                        property["type"] = path.node.value.typeAnnotation.type
+                    if(node.value.type == "NullableTypeAnnotation") {
+                        property["type"] = node.value.typeAnnotation.type
                         property["nullable"] = true
                     } else {
-                        property["type"] = path.node.value.type; 
+                        property["type"] = node.value.type; 
                     }
-                    properties[path.node.key.name] = property
+                    properties[node.key.name] = property
+                }
+            }
+        }
+        /*if (path.node.type == "ObjectTypeProperty")  {
+            let property: { [key: string]: any } = {}
+            if(path.node.value.type == "NullableTypeAnnotation") {
+                property["type"] = path.node.value.typeAnnotation.type
+                property["nullable"] = true
+            } else {
+                property["type"] = path.node.value.type; 
+            }
+            properties[path.node.key.name] = property
 
-                    console.log(path.parent)
-                }*/
+            console.log(path.parent)
+        }*/
            
-        properties["sanityClassFound"] = componentClassNode != null
-        result[fileType] = properties
+        properties["classFound"] = componentClassNode != null;
+        properties["typeAliasFound"] = typeAlias != null;
+        result[fileType] = properties;
 
     }
     const jsonString = JSON.stringify(result, null, 2);

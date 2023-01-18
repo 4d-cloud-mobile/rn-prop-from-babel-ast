@@ -56,6 +56,8 @@ async function start(rootPath: string) {
         "StaticRenderer": ["StaticRenderer.js"].join(path.sep),
         "Image": ["..", "Image", "ImageProps.js"].join(path.sep),
         "Text": ["..", "Text", "TextProps.js"].join(path.sep),
+        "FlatList": ["..", "Lists", "FlatList.js"].join(path.sep),
+        "SectionList": ["..", "Lists", "SectionList.js"].join(path.sep),
         "Button": "Button.js"
     };
     let result: { [key: string]: any } = {}
@@ -79,10 +81,6 @@ async function start(rootPath: string) {
         properties["typeAliasFound"] = typeAlias != null;
         addPropertiesFrom(typeAlias, properties);
 
-        if (fileType == "Image") {
-            console.log(typeAlias.right);
-        }
-
         typeAlias = findObjectOfTypeWithName(ast, "TypeAlias", "AndroidProps") || findObjectOfTypeWithName(ast, "TypeAlias", "Android" + fileType + "Props"); 
         addPropertiesFrom(typeAlias, properties, (prop: any) : void => {
             prop["android"]=true 
@@ -92,11 +90,23 @@ async function start(rootPath: string) {
         addPropertiesFrom(typeAlias, properties, (prop: any) : void => {
             prop["ios"]=true 
         });
- 
+
+        typeAlias = findObjectOfTypeWithName(ast, "TypeAlias", "OptionalProps")
+        addPropertiesFrom(typeAlias, properties, (prop: any) : void => {
+            prop["optional"]=true 
+        });
+
+        typeAlias = findObjectOfTypeWithName(ast, "TypeAlias", "RequiredProps")
+        addPropertiesFrom(typeAlias, properties, (prop: any) : void => {
+            prop["required"]=true 
+        });
+
         result[fileType] = properties;
     }
+    console.log("Number of components: " + Object.keys(result).length);
     const jsonString = JSON.stringify(result, null, 2);
     await fs.writeFile("components.json", jsonString);
+    console.log("Info writed to components.json");
 }
 
 // Call start

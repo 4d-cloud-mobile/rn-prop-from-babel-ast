@@ -1235,6 +1235,114 @@
       "nullable": true
     }
   },
+  "FlatList": {
+    "classFound": true,
+    "typeAliasFound": true,
+    "renderItem": {
+      "type": "GenericTypeAnnotation",
+      "nullable": true,
+      "optional": true
+    },
+    "columnWrapperStyle": {
+      "type": "GenericTypeAnnotation",
+      "optional": true
+    },
+    "extraData": {
+      "type": "AnyTypeAnnotation",
+      "optional": true
+    },
+    "getItemLayout": {
+      "type": "FunctionTypeAnnotation",
+      "optional": true
+    },
+    "horizontal": {
+      "type": "BooleanTypeAnnotation",
+      "nullable": true,
+      "optional": true
+    },
+    "initialNumToRender": {
+      "type": "NumberTypeAnnotation",
+      "nullable": true,
+      "optional": true
+    },
+    "initialScrollIndex": {
+      "type": "NumberTypeAnnotation",
+      "nullable": true,
+      "optional": true
+    },
+    "inverted": {
+      "type": "BooleanTypeAnnotation",
+      "nullable": true,
+      "optional": true
+    },
+    "keyExtractor": {
+      "type": "FunctionTypeAnnotation",
+      "nullable": true,
+      "optional": true
+    },
+    "numColumns": {
+      "type": "NumberTypeAnnotation",
+      "optional": true
+    },
+    "removeClippedSubviews": {
+      "type": "BooleanTypeAnnotation",
+      "optional": true
+    },
+    "fadingEdgeLength": {
+      "type": "NumberTypeAnnotation",
+      "nullable": true,
+      "optional": true
+    },
+    "strictMode": {
+      "type": "BooleanTypeAnnotation",
+      "optional": true
+    },
+    "data": {
+      "type": "GenericTypeAnnotation",
+      "nullable": true,
+      "required": true
+    }
+  },
+  "SectionList": {
+    "classFound": true,
+    "typeAliasFound": true,
+    "renderItem": {
+      "type": "FunctionTypeAnnotation",
+      "optional": true
+    },
+    "extraData": {
+      "type": "AnyTypeAnnotation",
+      "optional": true
+    },
+    "initialNumToRender": {
+      "type": "NumberTypeAnnotation",
+      "nullable": true,
+      "optional": true
+    },
+    "inverted": {
+      "type": "BooleanTypeAnnotation",
+      "nullable": true,
+      "optional": true
+    },
+    "keyExtractor": {
+      "type": "FunctionTypeAnnotation",
+      "nullable": true,
+      "optional": true
+    },
+    "onEndReached": {
+      "type": "FunctionTypeAnnotation",
+      "nullable": true,
+      "optional": true
+    },
+    "removeClippedSubviews": {
+      "type": "BooleanTypeAnnotation",
+      "optional": true
+    },
+    "sections": {
+      "type": "GenericTypeAnnotation",
+      "required": true
+    }
+  },
   "Button": {
     "classFound": true,
     "typeAliasFound": true,

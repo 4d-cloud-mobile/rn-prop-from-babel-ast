@@ -20,6 +20,8 @@ npm install -g ts-node
 npm run tstart
 ```
 
+This will update [components.json](components.json)
+
 ### change react-native version
 
 to get source react-native is added as dev dependencies, so just change needed version (and package.json will be updated)

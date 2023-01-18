@@ -1,0 +1,17 @@
+{
+  "ActivityIndicator": {
+    "sanityClassFound": false
+  },
+  "Switch": {
+    "sanityClassFound": false
+  },
+  "RefreshControl": {
+    "sanityClassFound": false
+  },
+  "Slider": {
+    "sanityClassFound": false
+  },
+  "Button": {
+    "sanityClassFound": false
+  }
+}

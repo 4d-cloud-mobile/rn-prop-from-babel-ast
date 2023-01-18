@@ -55,8 +55,10 @@ async function start(rootPath: string) {
         "View": ["View", "View.js"].join(path.sep),
         "StaticRenderer": ["StaticRenderer.js"].join(path.sep),
         "Image": ["..", "Image", "ImageProps.js"].join(path.sep),
+        "ImageBackground": ["..", "Image", "ImageProps.js"].join(path.sep),
         "Text": ["..", "Text", "TextProps.js"].join(path.sep),
         "FlatList": ["..", "Lists", "FlatList.js"].join(path.sep),
+        "VirtualizedList": ["..", "Lists", "VirtualizedListProps.js"].join(path.sep),
         "SectionList": ["..", "Lists", "SectionList.js"].join(path.sep),
         "Button": "Button.js"
     };

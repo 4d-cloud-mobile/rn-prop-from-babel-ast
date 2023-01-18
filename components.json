@@ -1056,6 +1056,24 @@
       "ios": true
     }
   },
+  "ImageBackground": {
+    "classFound": false,
+    "typeAliasFound": true,
+    "children": {
+      "type": "GenericTypeAnnotation"
+    },
+    "style": {
+      "type": "GenericTypeAnnotation",
+      "nullable": true
+    },
+    "imageStyle": {
+      "type": "GenericTypeAnnotation",
+      "nullable": true
+    },
+    "imageRef": {
+      "type": "GenericTypeAnnotation"
+    }
+  },
   "Text": {
     "classFound": false,
     "typeAliasFound": true,
@@ -1300,6 +1318,187 @@
     "data": {
       "type": "GenericTypeAnnotation",
       "nullable": true,
+      "required": true
+    }
+  },
+  "VirtualizedList": {
+    "classFound": false,
+    "typeAliasFound": true,
+    "renderItem": {
+      "type": "GenericTypeAnnotation",
+      "nullable": true,
+      "optional": true
+    },
+    "debug": {
+      "type": "BooleanTypeAnnotation",
+      "nullable": true,
+      "optional": true
+    },
+    "disableVirtualization": {
+      "type": "BooleanTypeAnnotation",
+      "nullable": true,
+      "optional": true
+    },
+    "extraData": {
+      "type": "AnyTypeAnnotation",
+      "optional": true
+    },
+    "getItemLayout": {
+      "type": "FunctionTypeAnnotation",
+      "optional": true
+    },
+    "horizontal": {
+      "type": "BooleanTypeAnnotation",
+      "nullable": true,
+      "optional": true
+    },
+    "initialNumToRender": {
+      "type": "NumberTypeAnnotation",
+      "nullable": true,
+      "optional": true
+    },
+    "initialScrollIndex": {
+      "type": "NumberTypeAnnotation",
+      "nullable": true,
+      "optional": true
+    },
+    "inverted": {
+      "type": "BooleanTypeAnnotation",
+      "nullable": true,
+      "optional": true
+    },
+    "keyExtractor": {
+      "type": "FunctionTypeAnnotation",
+      "nullable": true,
+      "optional": true
+    },
+    "CellRendererComponent": {
+      "type": "GenericTypeAnnotation",
+      "nullable": true,
+      "optional": true
+    },
+    "ItemSeparatorComponent": {
+      "type": "GenericTypeAnnotation",
+      "nullable": true,
+      "optional": true
+    },
+    "ListItemComponent": {
+      "type": "UnionTypeAnnotation",
+      "nullable": true,
+      "optional": true
+    },
+    "ListEmptyComponent": {
+      "type": "UnionTypeAnnotation",
+      "nullable": true,
+      "optional": true
+    },
+    "ListFooterComponent": {
+      "type": "UnionTypeAnnotation",
+      "nullable": true,
+      "optional": true
+    },
+    "ListFooterComponentStyle": {
+      "type": "GenericTypeAnnotation",
+      "optional": true
+    },
+    "ListHeaderComponent": {
+      "type": "UnionTypeAnnotation",
+      "nullable": true,
+      "optional": true
+    },
+    "ListHeaderComponentStyle": {
+      "type": "GenericTypeAnnotation",
+      "optional": true
+    },
+    "maxToRenderPerBatch": {
+      "type": "NumberTypeAnnotation",
+      "nullable": true,
+      "optional": true
+    },
+    "onEndReached": {
+      "type": "FunctionTypeAnnotation",
+      "nullable": true,
+      "optional": true
+    },
+    "onEndReachedThreshold": {
+      "type": "NumberTypeAnnotation",
+      "nullable": true,
+      "optional": true
+    },
+    "onRefresh": {
+      "type": "FunctionTypeAnnotation",
+      "nullable": true,
+      "optional": true
+    },
+    "onScrollToIndexFailed": {
+      "type": "FunctionTypeAnnotation",
+      "nullable": true,
+      "optional": true
+    },
+    "onViewableItemsChanged": {
+      "type": "FunctionTypeAnnotation",
+      "nullable": true,
+      "optional": true
+    },
+    "persistentScrollbar": {
+      "type": "BooleanTypeAnnotation",
+      "nullable": true,
+      "optional": true
+    },
+    "progressViewOffset": {
+      "type": "NumberTypeAnnotation",
+      "optional": true
+    },
+    "refreshControl": {
+      "type": "GenericTypeAnnotation",
+      "nullable": true,
+      "optional": true
+    },
+    "refreshing": {
+      "type": "BooleanTypeAnnotation",
+      "nullable": true,
+      "optional": true
+    },
+    "removeClippedSubviews": {
+      "type": "BooleanTypeAnnotation",
+      "optional": true
+    },
+    "renderScrollComponent": {
+      "type": "FunctionTypeAnnotation",
+      "optional": true
+    },
+    "updateCellsBatchingPeriod": {
+      "type": "NumberTypeAnnotation",
+      "nullable": true,
+      "optional": true
+    },
+    "viewabilityConfig": {
+      "type": "GenericTypeAnnotation",
+      "optional": true
+    },
+    "viewabilityConfigCallbackPairs": {
+      "type": "GenericTypeAnnotation",
+      "optional": true
+    },
+    "windowSize": {
+      "type": "NumberTypeAnnotation",
+      "nullable": true,
+      "optional": true
+    },
+    "legacyImplementation": {
+      "type": "EmptyTypeAnnotation",
+      "optional": true
+    },
+    "data": {
+      "type": "AnyTypeAnnotation",
+      "required": true
+    },
+    "getItem": {
+      "type": "FunctionTypeAnnotation",
+      "required": true
+    },
+    "getItemCount": {
+      "type": "FunctionTypeAnnotation",
       "required": true
     }
   },

@@ -928,7 +928,133 @@
   },
   "Image": {
     "classFound": false,
-    "typeAliasFound": true
+    "typeAliasFound": true,
+    "accessible": {
+      "type": "BooleanTypeAnnotation",
+      "nullable": true
+    },
+    "internal_analyticTag": {
+      "type": "StringTypeAnnotation",
+      "nullable": true
+    },
+    "accessibilityLabel": {
+      "type": "GenericTypeAnnotation",
+      "nullable": true
+    },
+    "undefined": {
+      "type": "StringTypeAnnotation",
+      "nullable": true
+    },
+    "alt": {
+      "type": "GenericTypeAnnotation",
+      "nullable": true
+    },
+    "blurRadius": {
+      "type": "NumberTypeAnnotation",
+      "nullable": true
+    },
+    "capInsets": {
+      "type": "GenericTypeAnnotation",
+      "nullable": true
+    },
+    "crossOrigin": {
+      "type": "UnionTypeAnnotation",
+      "nullable": true
+    },
+    "height": {
+      "type": "NumberTypeAnnotation"
+    },
+    "width": {
+      "type": "NumberTypeAnnotation"
+    },
+    "onError": {
+      "type": "FunctionTypeAnnotation",
+      "nullable": true
+    },
+    "onLayout": {
+      "type": "FunctionTypeAnnotation",
+      "nullable": true
+    },
+    "onLoad": {
+      "type": "FunctionTypeAnnotation",
+      "nullable": true
+    },
+    "onLoadEnd": {
+      "type": "FunctionTypeAnnotation",
+      "nullable": true
+    },
+    "onLoadStart": {
+      "type": "FunctionTypeAnnotation",
+      "nullable": true
+    },
+    "resizeMethod": {
+      "type": "UnionTypeAnnotation",
+      "nullable": true
+    },
+    "source": {
+      "type": "GenericTypeAnnotation",
+      "nullable": true
+    },
+    "style": {
+      "type": "GenericTypeAnnotation",
+      "nullable": true
+    },
+    "referrerPolicy": {
+      "type": "UnionTypeAnnotation",
+      "nullable": true
+    },
+    "resizeMode": {
+      "type": "UnionTypeAnnotation",
+      "nullable": true
+    },
+    "testID": {
+      "type": "StringTypeAnnotation",
+      "nullable": true
+    },
+    "tintColor": {
+      "type": "GenericTypeAnnotation"
+    },
+    "src": {
+      "type": "StringTypeAnnotation",
+      "nullable": true
+    },
+    "srcSet": {
+      "type": "StringTypeAnnotation",
+      "nullable": true
+    },
+    "children": {
+      "type": "EmptyTypeAnnotation"
+    },
+    "loadingIndicatorSource": {
+      "type": "UnionTypeAnnotation",
+      "nullable": true,
+      "android": true
+    },
+    "progressiveRenderingEnabled": {
+      "type": "BooleanTypeAnnotation",
+      "nullable": true,
+      "android": true
+    },
+    "fadeDuration": {
+      "type": "NumberTypeAnnotation",
+      "nullable": true,
+      "android": true
+    },
+    "defaultSource": {
+      "type": "GenericTypeAnnotation",
+      "nullable": true,
+      "ios": true
+    },
+    "onPartialLoad": {
+      "type": "FunctionTypeAnnotation",
+      "nullable": true,
+      "ios": true
+    },
+    "onProgress": {
+      "type": "FunctionTypeAnnotation",
+      "nullable": true,
+      "ios": true
+    }
   },
   "Text": {
     "classFound": false,

@@ -18,22 +18,24 @@ function findObjectOfTypeWithName(ast: any, type: string, name: string): any {
 }
 
 function addPropertiesFrom(typeAlias: any, properties: { [key: string]: any; }, callback: ((prop: any) => void) | null = null) {
-    if (typeAlias && typeAlias.right.typeParameters) {
-        const nodeProperties: any = typeAlias.right.typeParameters.params[0].properties;
-        for (const nodeKey in nodeProperties) {
-            const node: any = nodeProperties[nodeKey];
-            if (node.value) {
-                let property: { [key: string]: any; } = {};
-                if (node.value.type == "NullableTypeAnnotation") {
-                    property["type"] = node.value.typeAnnotation.type;
-                    property["nullable"] = true;
-                } else {
-                    property["type"] = node.value.type;
+    if (typeAlias && typeAlias.right) {
+        const nodeProperties: any = (typeAlias.right.typeParameters) ? typeAlias.right.typeParameters.params[0].properties : typeAlias.right.properties;
+        if (nodeProperties)  {
+            for (const nodeKey in nodeProperties) {
+                const node: any = nodeProperties[nodeKey];
+                if (node.value) {
+                    let property: { [key: string]: any; } = {};
+                    if (node.value.type == "NullableTypeAnnotation") {
+                        property["type"] = node.value.typeAnnotation.type;
+                        property["nullable"] = true;
+                    } else {
+                        property["type"] = node.value.type;
+                    }
+                    if (callback) {
+                        callback(property);
+                    }
+                    properties[node.key.name] = property;
                 }
-                if (callback) {
-                    callback(property);
-                }
-                properties[node.key.name] = property;
             }
         }
     }
@@ -77,12 +79,16 @@ async function start(rootPath: string) {
         properties["typeAliasFound"] = typeAlias != null;
         addPropertiesFrom(typeAlias, properties);
 
-        typeAlias = findObjectOfTypeWithName(ast, "TypeAlias", "AndroidProps"); 
+        if (fileType == "Image") {
+            console.log(typeAlias.right);
+        }
+
+        typeAlias = findObjectOfTypeWithName(ast, "TypeAlias", "AndroidProps") || findObjectOfTypeWithName(ast, "TypeAlias", "Android" + fileType + "Props"); 
         addPropertiesFrom(typeAlias, properties, (prop: any) : void => {
             prop["android"]=true 
         });
       
-        typeAlias = findObjectOfTypeWithName(ast, "TypeAlias", "IOSProps");
+        typeAlias = findObjectOfTypeWithName(ast, "TypeAlias", "IOSProps") || findObjectOfTypeWithName(ast, "TypeAlias", "IOS" + fileType + "Props")
         addPropertiesFrom(typeAlias, properties, (prop: any) : void => {
             prop["ios"]=true 
         });

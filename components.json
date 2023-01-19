@@ -254,7 +254,7 @@
     },
     "children": {
       "union": true,
-      "type": "ERROR: Generic without id.name or typeParameters {\"type\":\"GenericTypeAnnotation\",\"start\":2827,\"end\":2837,\"loc\":{\"start\":{\"line\":92,\"column\":12,\"index\":2827},\"end\":{\"line\":92,\"column\":22,\"index\":2837}},\"typeParameters\":null,\"id\":{\"type\":\"QualifiedTypeIdentifier\",\"start\":2827,\"end\":2837,\"loc\":{\"start\":{\"line\":92,\"column\":12,\"index\":2827},\"end\":{\"line\":92,\"column\":22,\"index\":2837}},\"qualification\":{\"type\":\"Identifier\",\"start\":2827,\"end\":2832,\"loc\":{\"start\":{\"line\":92,\"column\":12,\"index\":2827},\"end\":{\"line\":92,\"column\":17,\"index\":2832},\"identifierName\":\"React\"},\"name\":\"React\"},\"id\":{\"type\":\"Identifier\",\"start\":2833,\"end\":2837,\"loc\":{\"start\":{\"line\":92,\"column\":18,\"index\":2833},\"end\":{\"line\":92,\"column\":22,\"index\":2837},\"identifierName\":\"Node\"},\"name\":\"Node\"}}}|FunctionTypeAnnotation"
+      "type": "React<Node>|FunctionTypeAnnotation"
     },
     "delayHoverIn": {
       "nullable": true,
@@ -458,7 +458,7 @@
       "type": "TypeParameterInstantiation"
     },
     "children": {
-      "type": "ERROR: Generic without id.name or typeParameters {\"type\":\"GenericTypeAnnotation\",\"start\":26035,\"end\":26045,\"loc\":{\"start\":{\"line\":656,\"column\":13,\"index\":26035},\"end\":{\"line\":656,\"column\":23,\"index\":26045}},\"typeParameters\":null,\"id\":{\"type\":\"QualifiedTypeIdentifier\",\"start\":26035,\"end\":26045,\"loc\":{\"start\":{\"line\":656,\"column\":13,\"index\":26035},\"end\":{\"line\":656,\"column\":23,\"index\":26045}},\"qualification\":{\"type\":\"Identifier\",\"start\":26035,\"end\":26040,\"loc\":{\"start\":{\"line\":656,\"column\":13,\"index\":26035},\"end\":{\"line\":656,\"column\":18,\"index\":26040},\"identifierName\":\"React\"},\"name\":\"React\"},\"id\":{\"type\":\"Identifier\",\"start\":26041,\"end\":26045,\"loc\":{\"start\":{\"line\":656,\"column\":19,\"index\":26041},\"end\":{\"line\":656,\"column\":23,\"index\":26045},\"identifierName\":\"Node\"},\"name\":\"Node\"}}}"
+      "type": "React<Node>"
     },
     "innerViewRef": {
       "type": "TypeParameterInstantiation"

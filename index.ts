@@ -31,12 +31,21 @@ function stringOfType(property: { [key: string]: any; }, node: any): string {
     } else if (node.type == "GenericTypeAnnotation") {
         if (node && node.id.name) {
             return node.id.name;
-        } if (node && node.typeParameters) {
+        } else if (node && node.typeParameters) {
             return stringOfType(property, node.typeParameters)
+        } else if (node && node.id) {
+            return stringOfType(property, node.id)
         } else {
             return "ERROR: Generic without id.name or typeParameters "+JSON.stringify(node);
         }
-    } else if (node.type == "UnionTypeAnnotation") {
+    } else if (node.type == "QualifiedTypeIdentifier") {
+        if (node && node.id.name) {
+            return node.qualification.name +"<" + node.id.name +">";
+        } else {
+            return "ERROR: qualified without id.name  "+JSON.stringify(node);
+        }
+    } 
+    else if (node.type == "UnionTypeAnnotation") {
         property["union"] = true;
         if (node.types) {
             return (node.types as any[]).map(item => {
@@ -45,7 +54,21 @@ function stringOfType(property: { [key: string]: any; }, node: any): string {
         } else {
             return "ERROR: Union without types key";
         }
-    } else if (node.id) {
+    } /*else if (node.type == "TypeParameterInstantiation") {
+        property["TypeParameterInstantiation"] = true;
+        if (node.params) {
+            return (node.params as any[]).map(item => {
+                return stringOfType(property, item)
+            }).filter((n, i, arr) => arr.indexOf(n) === i).join(",")
+        } else {
+            return "ERROR: TypeParameterInstantiation without params key";
+        }
+    } else if (node.type == "AnyTypeAnnotation") {
+        property["AnyTypeAnnotation"] = true;
+       
+            return JSON.stringify(node)
+        
+    } */else if (node.id) {
         return node.id.type;
     } else if (node.type) {
         return node.type;

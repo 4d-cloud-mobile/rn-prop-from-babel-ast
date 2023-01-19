@@ -37,7 +37,8 @@
     },
     "trackColor": {
       "nullable": true,
-      "type": "$ReadOnly"
+      "TypeParameterInstantiation": true,
+      "type": "$ReadOnly(ObjectTypeAnnotation)"
     },
     "ios_backgroundColor": {
       "nullable": true,
@@ -73,7 +74,8 @@
     },
     "colors": {
       "nullable": true,
-      "type": "$ReadOnlyArray",
+      "TypeParameterInstantiation": true,
+      "type": "$ReadOnlyArray(ColorValue)",
       "android": true
     },
     "progressBackgroundColor": {
@@ -184,7 +186,8 @@
     "typeAliasFound": true,
     "accessibilityActions": {
       "nullable": true,
-      "type": "$ReadOnlyArray"
+      "TypeParameterInstantiation": true,
+      "type": "$ReadOnlyArray(AccessibilityActionInfo)"
     },
     "accessibilityElementsHidden": {
       "nullable": true,
@@ -423,7 +426,8 @@
     },
     "stickyHeaderIndices": {
       "nullable": true,
-      "type": "$ReadOnlyArray"
+      "TypeParameterInstantiation": true,
+      "type": "$ReadOnlyArray(NumberTypeAnnotation)"
     },
     "StickyHeaderComponent": {
       "type": "StickyHeaderComponentType"
@@ -439,7 +443,8 @@
     },
     "snapToOffsets": {
       "nullable": true,
-      "type": "$ReadOnlyArray"
+      "TypeParameterInstantiation": true,
+      "type": "$ReadOnlyArray(NumberTypeAnnotation)"
     },
     "snapToStart": {
       "nullable": true,
@@ -455,16 +460,20 @@
     },
     "refreshControl": {
       "nullable": true,
-      "type": "TypeParameterInstantiation"
+      "TypeParameterInstantiation": true,
+      "type": "AnyTypeAnnotation"
     },
     "children": {
       "type": "React<Node>"
     },
     "innerViewRef": {
-      "type": "TypeParameterInstantiation"
+      "TypeParameterInstantiation": true,
+      "type": "View"
     },
     "scrollViewRef": {
-      "type": "TypeParameterInstantiation"
+      "TypeParameterInstantiation": true,
+      "IntersectionTypeAnnotation": true,
+      "type": "ScrollViewNativeComponent&ScrollViewImperativeMethods"
     },
     "nestedScrollEnabled": {
       "nullable": true,
@@ -565,7 +574,8 @@
     },
     "maintainVisibleContentPosition": {
       "nullable": true,
-      "type": "$ReadOnly",
+      "TypeParameterInstantiation": true,
+      "type": "$ReadOnly(ObjectTypeAnnotation)",
       "ios": true
     },
     "maximumZoomScale": {
@@ -665,7 +675,9 @@
     },
     "forwardedRef": {
       "nullable": true,
-      "type": "ReactRefSetter"
+      "TypeParameterInstantiation": true,
+      "IntersectionTypeAnnotation": true,
+      "type": "ReactRefSetter(HostComponent(MixedTypeAnnotation)&ImperativeMethods)"
     },
     "enterKeyHint": {
       "nullable": true,
@@ -773,7 +785,8 @@
     },
     "selection": {
       "nullable": true,
-      "type": "$ReadOnly"
+      "TypeParameterInstantiation": true,
+      "type": "$ReadOnly(ObjectTypeAnnotation)"
     },
     "selectionColor": {
       "nullable": true,
@@ -876,7 +889,8 @@
     "dataDetectorTypes": {
       "union": true,
       "nullable": true,
-      "type": "DataDetectorTypesType|$ReadOnlyArray",
+      "TypeParameterInstantiation": true,
+      "type": "DataDetectorTypesType|$ReadOnlyArray(DataDetectorTypesType)",
       "ios": true
     },
     "enablesReturnKeyAutomatically": {
@@ -1051,7 +1065,8 @@
     "loadingIndicatorSource": {
       "nullable": true,
       "union": true,
-      "type": "NumberTypeAnnotation|$ReadOnly",
+      "TypeParameterInstantiation": true,
+      "type": "NumberTypeAnnotation|$ReadOnly(ObjectTypeAnnotation)",
       "android": true
     },
     "progressiveRenderingEnabled": {
@@ -1095,7 +1110,8 @@
       "type": "ImageStyleProp"
     },
     "imageRef": {
-      "type": "Ref"
+      "TypeParameterInstantiation": true,
+      "type": "Ref(Image)"
     }
   },
   "Text": {
@@ -1107,7 +1123,8 @@
     },
     "accessibilityActions": {
       "nullable": true,
-      "type": "$ReadOnlyArray"
+      "TypeParameterInstantiation": true,
+      "type": "$ReadOnlyArray(AccessibilityActionInfo)"
     },
     "onAccessibilityAction": {
       "nullable": true,
@@ -1288,7 +1305,8 @@
     "typeAliasFound": true,
     "renderItem": {
       "nullable": true,
-      "type": "RenderItemType",
+      "TypeParameterInstantiation": true,
+      "type": "RenderItemType(ItemT)",
       "optional": true
     },
     "columnWrapperStyle": {
@@ -1347,7 +1365,8 @@
     },
     "data": {
       "nullable": true,
-      "type": "$ReadOnlyArray",
+      "TypeParameterInstantiation": true,
+      "type": "$ReadOnlyArray(ItemT)",
       "required": true
     }
   },
@@ -1356,7 +1375,8 @@
     "typeAliasFound": true,
     "renderItem": {
       "nullable": true,
-      "type": "RenderItemType",
+      "TypeParameterInstantiation": true,
+      "type": "RenderItemType(Item)",
       "optional": true
     },
     "debug": {
@@ -1404,30 +1424,35 @@
     },
     "CellRendererComponent": {
       "nullable": true,
-      "type": "TypeParameterInstantiation",
+      "TypeParameterInstantiation": true,
+      "type": "AnyTypeAnnotation",
       "optional": true
     },
     "ItemSeparatorComponent": {
       "nullable": true,
-      "type": "TypeParameterInstantiation",
+      "TypeParameterInstantiation": true,
+      "type": "AnyTypeAnnotation",
       "optional": true
     },
     "ListItemComponent": {
       "nullable": true,
       "union": true,
-      "type": "TypeParameterInstantiation",
+      "TypeParameterInstantiation": true,
+      "type": "AnyTypeAnnotation",
       "optional": true
     },
     "ListEmptyComponent": {
       "nullable": true,
       "union": true,
-      "type": "TypeParameterInstantiation",
+      "TypeParameterInstantiation": true,
+      "type": "AnyTypeAnnotation",
       "optional": true
     },
     "ListFooterComponent": {
       "nullable": true,
       "union": true,
-      "type": "TypeParameterInstantiation",
+      "TypeParameterInstantiation": true,
+      "type": "AnyTypeAnnotation",
       "optional": true
     },
     "ListFooterComponentStyle": {
@@ -1437,7 +1462,8 @@
     "ListHeaderComponent": {
       "nullable": true,
       "union": true,
-      "type": "TypeParameterInstantiation",
+      "TypeParameterInstantiation": true,
+      "type": "AnyTypeAnnotation",
       "optional": true
     },
     "ListHeaderComponentStyle": {
@@ -1485,7 +1511,8 @@
     },
     "refreshControl": {
       "nullable": true,
-      "type": "TypeParameterInstantiation",
+      "TypeParameterInstantiation": true,
+      "type": "AnyTypeAnnotation",
       "optional": true
     },
     "refreshing": {
@@ -1511,7 +1538,8 @@
       "optional": true
     },
     "viewabilityConfigCallbackPairs": {
-      "type": "Array",
+      "TypeParameterInstantiation": true,
+      "type": "Array(ViewabilityConfigCallbackPair)",
       "optional": true
     },
     "windowSize": {
@@ -1572,7 +1600,8 @@
       "optional": true
     },
     "sections": {
-      "type": "$ReadOnlyArray",
+      "TypeParameterInstantiation": true,
+      "type": "$ReadOnlyArray(SectionT)",
       "required": true
     }
   },
@@ -1639,7 +1668,8 @@
     },
     "accessibilityActions": {
       "nullable": true,
-      "type": "$ReadOnlyArray"
+      "TypeParameterInstantiation": true,
+      "type": "$ReadOnlyArray(AccessibilityActionInfo)"
     },
     "onAccessibilityAction": {
       "nullable": true,

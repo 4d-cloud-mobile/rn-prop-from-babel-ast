@@ -18,6 +18,10 @@ function findObjectOfTypeWithName(ast: any, type: string, name: string): any {
 }
 
 function stringOfType(property: { [key: string]: any; }, node: any): string {
+
+    /*if (property["raw"] === undefined) {
+        property["raw"] = node;
+    }*/
     if (typeof node.value == "object") {
         return stringOfType(property, node.value);
     }
@@ -30,6 +34,9 @@ function stringOfType(property: { [key: string]: any; }, node: any): string {
         }
     } else if (node.type == "GenericTypeAnnotation") {
         if (node && node.id.name) {
+            if (node && node.typeParameters) {
+                return node.id.name+"("+stringOfType(property, node.typeParameters)+")"
+            }
             return node.id.name;
         } else if (node && node.typeParameters) {
             return stringOfType(property, node.typeParameters)
@@ -54,21 +61,30 @@ function stringOfType(property: { [key: string]: any; }, node: any): string {
         } else {
             return "ERROR: Union without types key";
         }
-    } /*else if (node.type == "TypeParameterInstantiation") {
+    } else if (node.type == "TypeParameterInstantiation") {
         property["TypeParameterInstantiation"] = true;
-        if (node.params) {
+        if (node.params) { 
             return (node.params as any[]).map(item => {
                 return stringOfType(property, item)
-            }).filter((n, i, arr) => arr.indexOf(n) === i).join(",")
+            }).filter((n, i, arr) => arr.indexOf(n) === i).join("|")
         } else {
             return "ERROR: TypeParameterInstantiation without params key";
         }
-    } else if (node.type == "AnyTypeAnnotation") {
-        property["AnyTypeAnnotation"] = true;
-       
-            return JSON.stringify(node)
-        
-    } */else if (node.id) {
+    } 
+    else if (node.type == "IntersectionTypeAnnotation") {
+        property["IntersectionTypeAnnotation"] = true;
+        if (node.types) { 
+            return (node.types as any[]).map(item => {
+                return stringOfType(property, item)
+            }).filter((n, i, arr) => arr.indexOf(n) === i).join("&")
+        } else {
+            return "ERROR: IntersectionTypeAnnotation without params key";
+        }
+    } 
+    else if (node.type == "TypeofTypeAnnotation") {
+        return stringOfType(property, node.argument);
+    }
+    else if (node.id) {
         return node.id.type;
     } else if (node.type) {
         return node.type;
